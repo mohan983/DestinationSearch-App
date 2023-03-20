@@ -1,0 +1,15 @@
+.M-container {
+  background-color: white;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  padding: 30px;
+  font-family: roboto;
+}
+
+.heading {
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 20px;
+}

@@ -1,0 +1,21 @@
+.container {
+  background-size: cover;
+  max-width: 65vw;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: roboto;
+}
+
+.image {
+  width: 250px;
+  height: 190px;
+  border-radius: 15px;
+}
+
+.paragraph {
+  color: black;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
