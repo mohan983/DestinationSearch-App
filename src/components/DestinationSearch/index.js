@@ -3,8 +3,7 @@ import DestinationItem from '../DestinationItem'
 import './index.css'
 
 class DestinationSearch extends Component {
-    const {destinationsList} = this.props
-
+    const {destinationsList} = this.state
   state = {
     searchInput: '',
     destinationDetailsList: destinationsList,
@@ -17,22 +16,31 @@ class DestinationSearch extends Component {
   }
 
   render() {
-
     const {searchInput, destinationDetailsList} = this.state
     const searchResults = destinationDetailsList.filter(eachUser =>
-      eachUser.name.includes(searchInput),
+      eachUser.name.toLowerCase().includes(searchInput),
     )
     return (
       <div className="M-container">
         <h1 className="heading">Destination Search</h1>
-        <input
-          type="search"
-          onChange={this.onChangeSearchInput}
-          value={searchInput}
-        />
-        {searchResults.map(eachUser => (
-          <DestinationItem destinationDetails={eachUser} key={eachUser.id} />
-        ))}
+        <div className="searchBar">
+          <input
+            type="search"
+            onChange={this.onChangeSearchInput}
+            value={searchInput}
+            className="input"
+          />
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png"
+            alt="search icon"
+            className="img"
+          />
+        </div>
+        <ul className="list-container">
+          {searchResults.map(eachUser => (
+            <DestinationItem destinationDetails={eachUser} key={eachUser.id} />
+          ))}
+        </ul>
       </div>
     )
   }

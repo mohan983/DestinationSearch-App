@@ -1,11 +1,5 @@
 .container {
-  background-size: cover;
-  max-width: 65vw;
-  overflow: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: roboto;
+  margin: 20px;
 }
 
 .image {
@@ -16,6 +10,6 @@
 
 .paragraph {
   color: black;
-  font-size: 23px;
+  font-size: 20px;
   margin-bottom: 25px;
 }
